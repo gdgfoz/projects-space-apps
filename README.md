@@ -1,4 +1,6 @@
-# Projeto de exemplo
+## GDG - Space Apps
+
+## Projeto de exemplo
 > Esta PWA foi utilizado como exemplo no evento PROTO DAY, em 23/10/2018.
 
 O projeto encontra-se em fase de desenvolvimento, porém serve como um esqueleto para iniciar outras aplicações com:
@@ -10,10 +12,11 @@ O projeto encontra-se em fase de desenvolvimento, porém serve como um esqueleto
 
 * PRs serão bem vindas :D
 
-
+## Demo
+Deploy de teste pode ser testado no firebase atravez do link [https://gdg-space-app.firebaseapp.com/projects](https://gdg-space-app.firebaseapp.com/projects)
 
 ------------------------ 
-# GdgSpaceApps
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
