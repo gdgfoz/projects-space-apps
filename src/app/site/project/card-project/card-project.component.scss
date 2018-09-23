@@ -1,0 +1,30 @@
+:host{
+  .sa-card-project{
+    background-color: #fff;
+    border-radius: 5px;
+
+    .header-image{
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 150px;
+
+      .header-image-bottom{
+        padding: 16px;
+
+        span{
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+    .card-content{
+      padding: 8px 16px;
+      height: 150px;
+
+      p.truncate-description{
+        height: 36px;
+        overflow: hidden;
+      }
+    }
+  }
+}

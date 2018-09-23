@@ -1,0 +1,22 @@
+:host .project-archive-content{
+  .search-box{
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+
+    .mat-icon{
+      color: #707070;
+      margin-right: 5px;
+    }
+
+    input{
+      height: 40px;
+      line-height: 40px;
+      color:  #707070;
+      font-size: 16px;
+      border: none;
+    }
+  }
+}

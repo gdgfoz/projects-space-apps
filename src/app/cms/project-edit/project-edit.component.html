@@ -1,0 +1,95 @@
+<div class="content-page">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <button routerLink="/" class="sa-back-button" mat-button="">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      Voltar
+    </button>
+
+  </div>
+  <div class="single-project-content">
+    <div *ngIf="project && project.thumb" fxLayout="column" fxLayoutAlign="center center" class="header-image"
+         [ngStyle]="{'background-image': 'url(' +  project.thumb  + ')'}">
+
+
+    </div>
+    <div *ngIf="!project || !project.thumb" fxLayout="column" fxLayoutAlign="center center" class="header-image">
+      <mat-icon class="secondary-text">photo_camera</mat-icon>
+      <span class="secondary-text">Alterar imagem</span>
+    </div>
+    <div class="card-content">
+      <form [formGroup]="projectForm" fxLayout="column">
+
+
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <h3 class="primary-fg m-0">Informações básicas</h3>
+        </div>
+        <mat-form-field appearance="legacy" >
+          <mat-label>Nome do projeto</mat-label>
+          <input formControlName="title" type="text" matInput>
+          <mat-icon class="mr-8 secondary-text" matPrefix>explore</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-icon class="mr-8 secondary-text" matPrefix>subject</mat-icon>
+          <mat-label>Descricao</mat-label>
+          <textarea matInput formControlName="content"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy" >
+          <mat-label>Local do evento</mat-label>
+          <input formControlName="cityName" type="text" matInput>
+          <mat-icon class="mr-8 secondary-text" matPrefix>room</mat-icon>
+        </mat-form-field>
+
+        <!--<mat-form-field appearance="legacy" >-->
+          <!--<mat-label>Edição do evento</mat-label>-->
+          <!--<input formControlName="edition" type="text" matInput>-->
+          <!--<mat-icon class="mr-8 secondary-text" matPrefix>calendar_today</mat-icon>-->
+        <!--</mat-form-field>-->
+
+
+
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <h3 class="primary-fg m-0">Informações adicionais</h3>
+        </div>
+        <!--<mat-form-field appearance="legacy" >-->
+          <!--<mat-label>Equipe</mat-label>-->
+          <!--<input formControlName="team" type="text" matInput>-->
+          <!--<mat-icon class="mr-8 secondary-text" matPrefix>people</mat-icon>-->
+        <!--</mat-form-field>-->
+
+        <mat-form-field appearance="legacy" >
+          <mat-label>Desafio</mat-label>
+          <input formControlName="challenge" type="text" matInput>
+          <mat-icon class="mr-8 secondary-text" matPrefix>gps_fixed</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy" >
+          <mat-icon class="mr-8 secondary-text" matPrefix>format_list_bulleted</mat-icon>
+          <mat-select formGroupName="category" placeholder="Categoria">
+            <mat-option *ngFor="let cat of categories" [value]="cat">
+              {{cat}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy" >
+          <mat-label>Site</mat-label>
+          <input formControlName="site" type="url" matInput>
+          <mat-icon class="mr-8 secondary-text" matPrefix>language</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy" >
+          <mat-label>Repositório</mat-label>
+          <input formControlName="repositoryUrl" type="url" matInput>
+          <mat-icon class="mr-8 secondary-text" matPrefix>settings_ethernet</mat-icon>
+        </mat-form-field>
+
+        <button (click)="save()" class="w-100-p sa-button-primary" mat-button="">Salvar</button>
+        <button *ngIf="!isNew" class="w-100-p sa-button-warn" mat-button="">Apagar projeto</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+

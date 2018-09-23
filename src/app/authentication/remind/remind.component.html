@@ -1,0 +1,25 @@
+<div fxLayout="column"  class="content-page remind-content as-dark-theme-page">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <button routerLink="/auth/login" class="sa-back-button" mat-button="">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      Voltar
+    </button>
+  </div>
+
+  <div  fxLayout="row" fxLayoutAlign="center center">
+    <sa-logo-sm></sa-logo-sm>
+  </div>
+
+  <form [formGroup]="remindForm" fxLayout="column">
+    <mat-form-field appearance="legacy" >
+      <mat-label>E-mail</mat-label>
+      <input formControlName="email" type="email" matInput>
+      <mat-icon class="mr-8" matPrefix>email</mat-icon>
+    </mat-form-field>
+
+
+    <button class="w-100-p sa-button-primary" mat-button="">Recuperar senha</button>
+
+  </form>
+
+</div>

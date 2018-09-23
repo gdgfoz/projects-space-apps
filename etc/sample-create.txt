@@ -1,0 +1,34 @@
+constructor(
+    private auth: AngularFireAuth,
+    private _service: ProjectService,
+    private _route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
+
+    // this.auth.authState.subscribe((auth) => {
+    //   console.log(auth);
+    // });
+
+    const slug = this._route.snapshot.params['slug'];
+
+    this.subject = this._service.find(slug)
+      .subscribe(result => this.project = result);
+
+    this._service.create({
+      slug: 'proj-138',
+      title: 'Projet 1',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta earum error excepturi magni nobis pariatur' +
+        ' perspiciatis quas quo, quod recusandae reiciendis reprehenderit sequi, sint temporibus, totam voluptate. Ipsum, omnis!',
+      thumb: 'https://d1o50x50snmhul.cloudfront.net/wp-content/gallery/abandoned-nasa-projects/a1x30nationalaerospaceplane.jpg',
+      cityName: 'Foz do Iguaçu',
+      challenge: 'Encontrar aguá',
+      category: 'Discovery',
+      site: 'https://sitedemo.com',
+      repositoryUrl: 'https://github.com/gdgfoz/space',
+      visibility: ProjectVisibilityEnum.PUBLIC,
+      authorId: '1',
+      createdAt: new Date(),
+    });
+
+  }

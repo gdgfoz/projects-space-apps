@@ -1,0 +1,22 @@
+
+<div class="sa-card-project mt-16">
+  <div [routerLink]="['./', project.slug]" fxLayout="column" fxLayoutAlign="end none" class="header-image"
+       [ngStyle]="{'background-image': 'url(' + project.thumb + ')'}">
+
+    <div  class="header-image-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+      <span>{{project.cityName}}</span>
+      <!--<span>{{project.createdAt }}</span>-->
+    </div>
+  </div>
+  <div class="card-content">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <h3 class="primary-fg m-0">{{project.title}}</h3>
+
+    </div>
+    <p class="truncate-description secondary-text">
+      {{project.content}}
+    </p>
+    <button [routerLink]="['./', project.slug]" class="w-100-p sa-button-primary" mat-button="">Mais informações</button>
+  </div>
+</div>
+

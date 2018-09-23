@@ -1,0 +1,104 @@
+$bg-color: #090B1A;
+$primary-color: #007AFF;
+
+//  HELPERS CLASSES
+.content-page{
+  padding: 12px 24px;
+}
+.mr-8{
+  margin-right: 8px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.w-100-p {
+  width: 100%;
+}
+.mt-24{
+  margin-top: 24px;
+}
+.mt-16{
+  margin-top: 16px;
+}
+.m-0{
+  margin: 0;
+}
+
+.primary-fg{
+  color: #0066B2;
+}
+.secondary-text{
+  color: #707070;
+}
+
+.mat-button.sa-button-primary {
+  background-color: $primary-color;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+}
+.mat-button.sa-back-button {
+  margin-left: -24px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+
+}
+.mat-button.sa-transparent-button {
+  margin-left: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+}
+.mat-button.sa-button-warn {
+  margin-left: 0;
+  background-color: #fff;
+  color: #FF3B30;
+  font-weight: 500;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+}
+
+.text-center{
+  text-align: center;
+  display: block;
+}
+
+a.white-no-style{
+  color: #fff;
+  text-decoration: none;
+}
+
+//DARK THEME
+.as-dark-theme-page {
+  color: #fff;
+
+  .mat-input-element,
+  .mat-form-field-appearance-legacy .mat-hint,
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #fff;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #fff;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon,
+  .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon {
+    font-size: 16px;
+  }
+}

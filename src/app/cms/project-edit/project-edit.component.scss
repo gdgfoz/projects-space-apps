@@ -1,0 +1,40 @@
+:host{
+  .single-project-content{
+    background-color: #fff;
+    border-radius: 5px;
+
+    .header-image{
+      background-color: #F2F2F2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 150px;
+
+      .header-image-bottom{
+        padding: 16px;
+
+        span{
+          font-weight: 600;
+          font-size: 14px;
+          color: #fff;
+        }
+      }
+    }
+    .card-content{
+      padding: 8px 16px;
+
+
+      p.truncate-description{
+
+      }
+
+      ::ng-deep .section-team{
+        .team-list.mat-list {
+          .mat-list-item .mat-list-item-content{
+            padding: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

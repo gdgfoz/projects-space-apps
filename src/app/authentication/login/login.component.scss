@@ -1,0 +1,34 @@
+:host {
+  .login-content {
+
+    .social-link-box {
+      .social-link-item {
+        width: 80px;
+        height: 80px;
+       a{
+         text-decoration: none;
+         //width: 50px;
+         //height: 50px;
+         //border: 2px solid #fff;
+         //border-radius: 50%;
+         //display: block;
+         //line-height: 50px;
+         //text-align: center;
+
+         img{
+           width: 50px;
+         }
+       }
+      }
+    }
+
+    .to-register {
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #007AFF;
+        font-weight: 600;
+      }
+    }
+  }
+}

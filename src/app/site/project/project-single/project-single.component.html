@@ -1,0 +1,93 @@
+<div class="content-page">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <button routerLink="/" class="sa-back-button" mat-button="">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      Voltar
+    </button>
+
+    <button [routerLink]="'/cms/project/' + project?.slug" class="sa-transparent-button" mat-button="">
+      <mat-icon>edit</mat-icon>
+      Editar
+    </button>
+  </div>
+  <div *ngIf="project" class="single-project-content">
+    <div fxLayout="column" fxLayoutAlign="end none" class="header-image"
+         [ngStyle]="{'background-image': 'url(' + project.thumb + ')'}">
+
+      <div  class="header-image-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+        <span>{{project.cityName}}</span>
+        <!--<span>{{project.createdAt | date: 'dd-MM-yyyy'}}</span>-->
+      </div>
+    </div>
+    <div class="card-content">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <h3 class="primary-fg m-0">{{project.title}}</h3>
+
+      </div>
+      <p class="truncate-description secondary-text">
+        {{project.content}}
+      </p>
+
+      <div class="section-team mt-16">
+
+        <div fxLayout="row" fxLayoutAlign="start center" class="section-title">
+          <mat-icon class="mr-8 primary-fg">people</mat-icon>
+          <h3 class="m-0 secondary-text">Equipe</h3>
+        </div>
+
+        <mat-list class="team-list">
+          <mat-list-item >
+            <img matListAvatar [src]="project.thumb" alt="...">
+            <h3 matLine> Ivete madruga</h3>
+          </mat-list-item>
+          <mat-list-item >
+            <img matListAvatar [src]="project.thumb" alt="...">
+            <h3 matLine> Ivete madruga</h3>
+          </mat-list-item>
+        </mat-list>
+
+      </div>
+
+      <div class="section-defiance mt-16">
+
+        <div fxLayout="row" fxLayoutAlign="start center" class="section-title">
+          <mat-icon class="mr-8 primary-fg">location_searching</mat-icon>
+          <h3 class="m-0 secondary-text">Desafio</h3>
+        </div>
+        <p class="secondary-text">{{project.challenge}}</p>
+      </div>
+
+      <div class="section-defiance mt-16">
+
+        <div fxLayout="row" fxLayoutAlign="start center" class="section-title">
+          <mat-icon class="mr-8 primary-fg">format_list_numbered</mat-icon>
+          <h3 class="m-0 secondary-text">Categoria</h3>
+        </div>
+        <p class="secondary-text">{{project.category}}</p>
+      </div>
+
+      <div class="section-defiance mt-16">
+
+        <div fxLayout="row" fxLayoutAlign="start center" class="section-title">
+          <mat-icon class="mr-8 primary-fg">language</mat-icon>
+          <h3 class="m-0 secondary-text">Site</h3>
+        </div>
+        <p class="secondary-text">
+          <a href="{{project.site}}" target="_blank">{{project.site}}</a>
+        </p>
+      </div>
+
+      <div class="section-defiance mt-16">
+
+        <div fxLayout="row" fxLayoutAlign="start center" class="section-title">
+          <mat-icon class="mr-8 primary-fg">code</mat-icon>
+          <h3 class="m-0 secondary-text">Repositório</h3>
+        </div>
+        <p class="secondary-text">
+          <a href="{{project.repositoryUrl}}" target="_blank">{{project.repositoryUrl}}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+

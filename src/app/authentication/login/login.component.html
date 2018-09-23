@@ -1,0 +1,45 @@
+<div fxLayout="column" class="content-page login-content as-dark-theme-page">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <sa-logo-sm></sa-logo-sm>
+  </div>
+
+  <form [formGroup]="loginForm" fxLayout="column">
+    <mat-form-field appearance="legacy">
+      <mat-label>E-mail</mat-label>
+      <input formControlName="email" type="email" matInput>
+      <mat-icon class="mr-8" matPrefix>email</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Senha</mat-label>
+      <input formControlName="password" type="password" matInput>
+      <mat-icon class="mr-8" matPrefix>lock</mat-icon>
+    </mat-form-field>
+
+    <button class="w-100-p sa-button-primary" mat-button="">Entrar</button>
+
+    <a class="white-no-style text-center mt-24" routerLink="/auth/remind-password">Esqueceu a senha?</a>
+  </form>
+
+  <div class="social-link-box" fxLayout="row" fxLayoutAlign="center center">
+    <div class="social-link-item" fxLayout="row" fxLayoutAlign="center center">
+      <a class="" (click)="loginWithFacebook()">
+        <img src="/assets/images/logo/facebook.png">
+      </a>
+    </div>
+    <div class="social-link-item" fxLayout="row" fxLayoutAlign="center center">
+      <a class="">
+        <img src="/assets/images/logo/twitter.png">
+      </a>
+    </div>
+    <div class="social-link-item" fxLayout="row" fxLayoutAlign="center center">
+      <a (click)="loginWithGoogle()">
+        <img src="/assets/images/logo/g-plus.png">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="to-register">
+    <span class="text-center">Não tem uma conta? <a routerLink="/auth/register">Registre-se</a></span>
+  </div>
+</div>

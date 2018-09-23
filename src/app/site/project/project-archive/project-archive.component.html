@@ -1,0 +1,35 @@
+<div fxLayout="column"  class="content-page project-archive-content as-dark-theme-page">
+  <div  fxLayout="row" fxLayoutAlign="space-between center">
+    <h3>Olá {{userName}}!</h3>
+
+    <mat-menu #menu="matMenu">
+      <button routerLink="/cms/novo-projeto" mat-menu-item>
+        <mat-icon>add_circle</mat-icon>
+        <span>Novo projeto</span>
+      </button>
+      <button routerLink="/auth/login" mat-menu-item>
+        <mat-icon>input</mat-icon>
+        <span>Entrar</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sair</span>
+      </button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </div>
+
+  <div class="search-box" fxLayout="row" fxLayoutAlign="start center">
+    <mat-icon matPrefix>search</mat-icon>
+    <input  fxFlex="" placeholder="Buscar (Ex.: Espaço, Marte, Estrelas)" matInput="" type="search">
+  </div>
+
+
+  <div *ngFor="let p of projects">
+    <sa-card-project [project]="p"></sa-card-project>
+
+  </div>
+</div>
+
